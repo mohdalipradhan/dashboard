@@ -6,7 +6,7 @@ import {
 } from "@/assets/data/images";
 import { LuLogOut, LuUserCircle2, LuZap } from "react-icons/lu";
 import React from "react";
-import SimplebarReactClient from "../../SimplebarReactClient";
+import SimplebarReactClient from "./SimplebarReactClient";
 import VerticalMenu from "./VerticalMenu";
 
 const MenuAdmin = () => {

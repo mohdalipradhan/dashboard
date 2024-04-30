@@ -1,1 +1,1 @@
-export { default as FilterResetButton } from "./FilterResetButton";
+export { default as FilterResetButton } from "../FilterResetButton";

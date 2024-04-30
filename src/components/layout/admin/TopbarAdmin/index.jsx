@@ -2,7 +2,7 @@ import { LuAlignJustify, LuSearch } from "react-icons/lu";
 import MaximizeScreen from "./MaximizeScreen";
 import LanguageDropdown from "./LanguageDropdown";
 import ProfileDropdown from "./ProfileDropdown";
-import NotificationDropdown from "./NotificationDropdown";
+import NotificationDropdown from "../../../NotificationDropdown";
 import { logoDarkImg, logoLightImg } from "@/assets/data/images";
 import { notificationsData } from "@/assets/data";
 

@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { LuBell } from "react-icons/lu";
-import { SimplebarReactClient } from "../../../index";
+import { SimplebarReactClient } from "./index";
 
 const NotificationDropdown = ({ notifications }) => {
   /**

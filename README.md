@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+A) Steps Undertaken:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I commenced the project by unzipping the provided folder and initiating a new eReact project using the command npx create-react-app appName.
+Upon examination of the interface and the essential imports, I delved into the sample file directory to grasp the necessary structuring.
+To streamline the process, I opted out of routing and directly rendered the requisite component.
+Through scrutinizing the exported and imported components, along with the dependencies affecting the desired output, insights were gleaned from the index.js files within folders.
+To streamline the project, I eliminated superfluous contexts, filters, layouts, and components that were not utilized in the rendering process, focusing solely on the essential dependencies.
+I replaced the Link tag provided by react-router-dom with suitable methods leveraging the window object for functionalities akin to useNavigate and useLocation.
+The base path of vite.config.js was set to the root link for coherence.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+B) Justification for Deviating from the Recommended Folder Structure:
 
-## Expanding the ESLint configuration
+Despite efforts to adhere to the suggested folder structure, certain files contained code segments that posed challenges for immediate comprehension, hence necessitating the retention of their original structure.
+However, all code files reside within the src folder, and components utilized are located within the designated component folder. Notably, context, layout, and asset folders were segregated outside the components folder.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+C) Reason for not being ble to get rid of all the redundand code before the deadline:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Regrettably, due to time constraints, I couldn't decipher certain sections of the code promptly, necessitating their retention for subsequent optimization.
+While endeavoring to minimize redundancy, I acknowledge the possibility of further optimization, particularly within helpers and utils folders, had I been more vigilant in monitoring time allocation.
+Consolidating the code for importing and exporting components within a single index.js file across various folders could have streamlined the process. Considering that I managed to remove many unnecessary files, I successfully completed around 65% of the intended optimization.

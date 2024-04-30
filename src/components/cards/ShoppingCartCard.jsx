@@ -1,13 +1,12 @@
 import { lazy } from "react";
 
-import { Link } from "react-router-dom";
 import { LuXCircle } from "react-icons/lu";
 import { currentCurrency } from "@/common";
 import { calculatedPrice } from "@/helpers";
 import { useShoppingContext } from "@/context";
-const ProductQuantityToggler = lazy(
-  () => import("../shopping-interactivity/ProductQuantityToggler")
-);
+// const ProductQuantityToggler = lazy(
+//   () => import("../shopping-interactivity/ProductQuantityToggler")
+// );
 
 const ShoppingCartCard = ({ dish }) => {
   const { name, id, images, price, sale } = dish;
@@ -32,12 +31,12 @@ const ShoppingCartCard = ({ dish }) => {
             className="h-18 w-18"
             alt="onion"
           />
-          <Link
-            to={`/dishes/${id}`}
+          <a
+            href={`/dishes/${id}`}
             className="text-sm font-medium text-default-800"
           >
             {name}
-          </Link>
+          </a>
         </div>
       </td>
       <td className="whitespace-nowrap px-5 py-3 text-sm">
@@ -54,7 +53,7 @@ const ShoppingCartCard = ({ dish }) => {
         )}
       </td>
       <td className="whitespace-nowrap px-5 py-3">
-        <ProductQuantityToggler dish={dish} />
+        {/* <ProductQuantityToggler dish={dish} /> */}
       </td>
       <td className="whitespace-nowrap px-5 py-3 text-center text-sm text-default-800">
         {currentCurrency}

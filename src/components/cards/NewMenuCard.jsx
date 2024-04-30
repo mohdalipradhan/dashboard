@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { BiFoodTag } from "react-icons/bi";
 import { LuPencil } from "react-icons/lu";
 import { currentCurrency } from "@/common";
@@ -15,8 +14,8 @@ const NewMenuCard = ({ dish }) => {
             }
           />
         </div>
-        <Link
-          to=""
+        <a
+          href=""
           className="group inline-flex items-center justify-center gap-2 rounded-full border border-primary px-3 py-1.5 text-sm font-medium text-primary transition-all duration-300 hover:bg-primary hover:text-white"
         >
           <LuPencil
@@ -24,7 +23,7 @@ const NewMenuCard = ({ dish }) => {
             className="fill-primary text-primary group-hover:fill-white group-hover:text-white"
           />{" "}
           Edit
-        </Link>
+        </a>
       </div>
       <div className="flex items-center justify-between gap-6">
         <h5 className="text-lg font-semibold text-default-900">{name}</h5>

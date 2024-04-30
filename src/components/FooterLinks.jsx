@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { LuFacebook, LuInstagram, LuPhone } from "react-icons/lu";
 import { FaXTwitter } from "react-icons/fa6";
 import SubscribeToMail from "./SubscribeToMail";
@@ -19,7 +18,7 @@ const FooterLinks = () => {
                     </h5>
                     {FOOTER_LINKS[title].map((item, idx) => (
                       <div className="text-default-600" key={item.name + idx}>
-                        <Link to={item.link ?? ""}>{item.name}</Link>
+                        <a href={item.link ?? ""}>{item.name}</a>
                       </div>
                     ))}
                   </div>
@@ -31,22 +30,22 @@ const FooterLinks = () => {
                   Get in touch
                 </h5>
                 <div className="text-default-600">
-                  <Link to="tel:+1234567891012">(+123) 456 789 123</Link>
+                  <a href="tel:+1234567891012">(+123) 456 789 123</a>
                 </div>
                 <div className="text-default-600">
-                  <Link to="mailto:example@mail.com">example@mail.com</Link>
+                  <a href="mailto:example@mail.com">example@mail.com</a>
                 </div>
                 <div className="flex items-center gap-4">
                   {[LuPhone, LuFacebook, LuInstagram, FaXTwitter].map(
                     (icon, idx) => {
                       const Icon = icon;
                       return (
-                        <Link key={idx} to="" className="cursor-pointer">
+                        <a key={idx} href="" className="cursor-pointer">
                           <Icon
                             size={24}
                             className="text-default-600 transition-all hover:text-primary"
                           />
-                        </Link>
+                        </a>
                       );
                     }
                   )}

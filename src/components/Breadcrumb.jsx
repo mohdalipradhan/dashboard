@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { LuChevronRight, LuHome } from "react-icons/lu";
 import PageTitle from "./PageTitle";
 
@@ -14,24 +13,24 @@ const Breadcrumb = ({ title, subtitle }) => {
               className="flex min-w-0 items-center gap-2 whitespace-nowrap"
             >
               <li className="text-sm">
-                <Link
+                <a
                   className="flex items-center gap-2 align-middle leading-none text-default-800 transition-all hover:text-primary-500"
-                  to="/home"
+                  href="/home"
                 >
                   <LuHome size={16} />
                   Home
                   <LuChevronRight size={16} />
-                </Link>
+                </a>
               </li>
               {subtitle && (
                 <li className="text-sm">
-                  <Link
+                  <a
                     className="flex items-center gap-2 align-middle leading-none text-default-800 transition-all hover:text-primary-500"
                     to=""
                   >
                     {subtitle}
                     <LuChevronRight size={16} />
-                  </Link>
+                  </a>
                 </li>
               )}
               <li

@@ -16,7 +16,6 @@ import { logoDarkImg, logoLightImg } from "@/assets/data/images";
 import { getClientVerticalMenuItems, getHorizontalMenuItems } from "@/helpers";
 import ProductSearchBar from "./ProductSearchBar";
 import CartAndWishList from "./CartAndWishList";
-import { Link } from "react-router-dom";
 const HorizontalMenu = lazy(() => import("./HorizontalMenu"));
 const StickyHeader = lazy(() => import("../../StickyHeader"));
 
@@ -40,7 +39,7 @@ const Navbar = () => {
                   />
                 </button>
 
-                <Link to="/home">
+                <a href="/home">
                   <img
                     src={logoDarkImg}
                     height={40}
@@ -55,7 +54,7 @@ const Navbar = () => {
                     alt="logo"
                     className="hidden h-10 dark:flex"
                   />
-                </Link>
+                </a>
               </div>
 
               <HorizontalMenu menuItems={getHorizontalMenuItems()} />
@@ -84,40 +83,40 @@ const Navbar = () => {
                     <div className="hs-dropdown-menu z-20 mt-4 hidden min-w-[200px] rounded-lg border border-default-100 bg-white p-1.5 opacity-0 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] transition-[opacity,margin] hs-dropdown-open:opacity-100 dark:bg-default-50">
                       <ul className="flex flex-col gap-1">
                         <li>
-                          <Link
+                          <a
                             className="flex items-center gap-3 rounded px-3 py-2 font-normal text-default-600 transition-all hover:bg-default-100 hover:text-default-700"
-                            to="/admin/profile"
+                            href="/admin/profile"
                             target="_blank"
                           >
                             <LuUserCircle size={16} /> Admin
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link
+                          <a
                             className="flex items-center gap-3 rounded px-3 py-2 font-normal text-default-600 transition-all hover:bg-default-100 hover:text-default-700"
-                            to="/cart"
+                            href="/cart"
                           >
                             <LuShoppingCart size={16} />
                             Cart
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link
+                          <a
                             className="flex items-center gap-3 rounded px-3 py-2 font-normal text-default-600 transition-all hover:bg-default-100 hover:text-default-700"
-                            to="/wishlist"
+                            href="/wishlist"
                           >
                             <LuHeart size={16} />
                             Wishlist
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link
-                            to="/auth/logout"
+                          <a
+                            href="/auth/logout"
                             className="flex w-full items-center gap-3 rounded px-3 py-2 font-normal text-default-600 transition-all hover:bg-default-100 hover:text-default-700"
                           >
                             <LuLogOut size={16} />
                             Log Out
-                          </Link>
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -137,7 +136,7 @@ const Navbar = () => {
         tabIndex={-1}
       >
         <div className="flex h-16 items-center justify-center border-b border-dashed border-default-200 transition-all duration-300">
-          <Link to="/home">
+          <a href="/home">
             <img
               src={logoDarkImg}
               width={130}
@@ -152,7 +151,7 @@ const Navbar = () => {
               alt="logo"
               className="hidden h-10 dark:flex"
             />
-          </Link>
+          </a>
         </div>
         <SimplebarReactClient className="h-[calc(100%-4rem)]">
           <nav className="hs-accordion-group flex w-full flex-col flex-wrap p-4">

@@ -3,9 +3,9 @@ import { FaStar } from "react-icons/fa6";
 import { currentCurrency } from "@/common";
 import { calculatedPrice } from "@/helpers";
 
-const ProductQuantityToggler = lazy(
-  () => import("../shopping-interactivity/ProductQuantityToggler")
-);
+// const ProductQuantityToggler = lazy(
+//   () => import("../shopping-interactivity/ProductQuantityToggler")
+// );
 
 
 const ProductGridCard = ({ dish }) => {
@@ -50,7 +50,7 @@ const ProductGridCard = ({ dish }) => {
               {discountedPrice}
             </h4>
 
-            <ProductQuantityToggler dish={dish} />
+            {/* <ProductQuantityToggler dish={dish} /> */}
           </div>
 
           {/* <AddToCartButton dish={dish} className="!w-full" /> */}

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 import {
   logoDarkImg,
@@ -19,7 +18,7 @@ const AuthFormLayout = ({
       <div className="flex h-full flex-col">
         <div className="shrink">
           <div>
-            <Link to="/" className="flex items-center">
+            <a href="/" className="flex items-center">
               <img
                 width={156}
                 height={48}
@@ -34,7 +33,7 @@ const AuthFormLayout = ({
                 alt="logo"
                 className="hidden h-12 dark:flex"
               />
-            </Link>
+            </a>
           </div>
           <div className="py-10">
             <h1 className="mb-2 text-3xl font-semibold text-default-800">

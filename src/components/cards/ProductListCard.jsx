@@ -9,9 +9,9 @@ import { calculatedPrice } from "@/helpers";
 // const AddToCartButton = lazy(
 //   () => import("../shopping-interactivity/AddToCartButton")
 // );
-const ProductQuantityToggler = lazy(
-  () => import("../shopping-interactivity/ProductQuantityToggler")
-);
+// const ProductQuantityToggler = lazy(
+//   () => import("../shopping-interactivity/ProductQuantityToggler")
+// );
 
 const ProductListCard = ({ dish }) => {
   const { images, name, id, price, sale, review } = dish;
@@ -53,7 +53,7 @@ const ProductListCard = ({ dish }) => {
               <div className="mb-6 flex flex-wrap items-center gap-4 md:flex-nowrap">
                 {/* <AddToCartButton dish={dish} className="w-fit" /> */}
 
-                <ProductQuantityToggler dish={dish} size="medium" />
+                {/* <ProductQuantityToggler dish={dish} size="medium" /> */}
               </div>
               <div className="flex items-center gap-4">
                 <h4 className="text-lg font-semibold text-primary sm:text-2xl">

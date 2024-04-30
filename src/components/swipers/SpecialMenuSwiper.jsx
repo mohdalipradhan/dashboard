@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { LuChevronRight } from "react-icons/lu";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
@@ -54,12 +53,12 @@ const SpecialMenuSwiper = ({ dishes }) => {
                     </span>
                     {dish.price}
                   </h5>
-                  <Link
-                    to="/dishes"
+                  <a
+                    href="/dishes"
                     className="inline-flex items-center border-b border-dashed border-white text-white"
                   >
                     Order Now <LuChevronRight size={20} />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

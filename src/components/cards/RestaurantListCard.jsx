@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { LuMail, LuMapPin, LuPhone } from "react-icons/lu";
 import { getSellerById } from "@/helpers";
 import { useEffect, useState } from "react";
@@ -77,12 +76,12 @@ const RestaurantListCard = ({ restaurant }) => {
         </div>
       </div>
       <div className="text-center">
-        <Link
-          to={`/admin/restaurants/${id}`}
+        <a
+          href={`/admin/restaurants/${id}`}
           className="inline-flex rounded-lg bg-primary px-8 py-2.5 font-medium text-white transition-all hover:bg-primary-500"
         >
           View Details
-        </Link>
+        </a>
       </div>
     </div>
   );

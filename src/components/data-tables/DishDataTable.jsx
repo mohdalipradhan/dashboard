@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { LuEye, LuPencil, LuTrash2 } from "react-icons/lu";
 import { DemoFilterDropdown } from "../filter";
 import GoToAddButton from "./GoToAddButton";
@@ -28,8 +27,8 @@ const DishDataTable = ({ rows, columns, title, buttonText, buttonLink }) => {
                     key={tableData + idx}
                     className="whitespace-nowrap px-6 py-4 text-sm font-medium text-default-800"
                   >
-                    <Link
-                      to="/admin/dishes/1008"
+                    <a
+                      href="/admin/dishes/1008"
                       className="flex items-center gap-3"
                     >
                       <div className="h-12 w-12 shrink">
@@ -44,7 +43,7 @@ const DishDataTable = ({ rows, columns, title, buttonText, buttonLink }) => {
                       <p className="text-base text-default-500 transition-all hover:text-primary">
                         {tableData}
                       </p>
-                    </Link>
+                    </a>
                   </td>
                 );
               } else if (column.key == "status") {

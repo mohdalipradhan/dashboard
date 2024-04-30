@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
 import { LuExternalLink } from "react-icons/lu";
 
 const DemoCard = ({ demo }) => {
   return (
-    <Link to={demo.link} target="_blank">
+    <a href={demo.link} target="_blank">
       <div className="group relative rounded-lg border border-default-100 bg-white text-center shadow-md transition-all duration-500 hover:-translate-y-1 dark:bg-default-100">
         <div className="p-4">
           <div className="relative overflow-hidden rounded-lg ">
@@ -26,7 +25,7 @@ const DemoCard = ({ demo }) => {
           </h5>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 

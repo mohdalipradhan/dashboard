@@ -2,7 +2,6 @@ import { Fragment, useCallback, useEffect, useState } from "react";
 import { LuChevronDown } from "react-icons/lu";
 import { findAllParent, findMenuItem, getMenuItemFromURL } from "@/helpers";
 import { cn } from "@/utils";
-import MegaMenuDropdown from "./MegaMenuDropdown";
 
 const MenuItemWithChildren = ({
   item,

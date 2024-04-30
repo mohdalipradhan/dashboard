@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { LuHeart, LuShoppingCart } from "react-icons/lu";
 import { useShoppingContext } from "@/context";
 

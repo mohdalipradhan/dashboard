@@ -1,5 +1,4 @@
 import { createContext, useContext, useState, useMemo, useEffect } from "react";
-import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 
 const FilterContext = createContext(undefined);
 
@@ -12,29 +11,21 @@ export const useFilterContext = () => {
 };
 
 export const FilterProvider = ({ children }) => {
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useState(new URLSearchParams(window.location.search));
+  const { pathname } = window.location;
 
-  const queryParams = Object.fromEntries([...searchParams]);
+  const queryParams = {};
+  for (const [key, value] of searchParams.entries()) {
+    queryParams[key] = value;
+  }
 
   const INIT_FILTER_STATE = {
-    categories: searchParams.has("categories")
-      ? queryParams["categories"].split(",").map((id) => Number(id))
-      : [],
-    restaurants: searchParams.has("restaurants")
-      ? queryParams["restaurants"].split(",").map((id) => Number(id))
-      : [],
-    search: searchParams.has("search") ? queryParams["search"] : undefined,
-    minPrice: searchParams.has("minPrice")
-      ? Number(queryParams["minPrice"])
-      : undefined,
-    maxPrice: searchParams.has("maxPrice")
-      ? Number(queryParams["maxPrice"])
-      : undefined,
-    rating: searchParams.has("rating")
-      ? Number(queryParams["rating"])
-      : undefined,
+    categories: queryParams.hasOwnProperty("categories") ? queryParams["categories"].split(",").map((id) => Number(id)) : [],
+    restaurants: queryParams.hasOwnProperty("restaurants") ? queryParams["restaurants"].split(",").map((id) => Number(id)) : [],
+    search: queryParams.hasOwnProperty("search") ? queryParams["search"] : undefined,
+    minPrice: queryParams.hasOwnProperty("minPrice") ? Number(queryParams["minPrice"]) : undefined,
+    maxPrice: queryParams.hasOwnProperty("maxPrice") ? Number(queryParams["maxPrice"]) : undefined,
+    rating: queryParams.hasOwnProperty("rating") ? Number(queryParams["rating"]) : undefined,
     updateCategory: () => {},
     updateRestaurant: () => {},
     updateSearch: () => {},
@@ -53,7 +44,7 @@ export const FilterProvider = ({ children }) => {
       categories.push(categoryId);
       updateState({ categories });
     } else if (categories.includes(categoryId)) {
-      updateState({ categories: categories.filter((id) => id != categoryId) });
+      updateState({ categories: categories.filter((id) => id !== categoryId) });
     }
   };
 
@@ -64,7 +55,7 @@ export const FilterProvider = ({ children }) => {
       updateState({ restaurants });
     } else if (restaurants.includes(restaurantId)) {
       updateState({
-        restaurants: restaurants.filter((id) => id != restaurantId),
+        restaurants: restaurants.filter((id) => id !== restaurantId),
       });
     }
   };
@@ -80,10 +71,10 @@ export const FilterProvider = ({ children }) => {
   useEffect(() => {
     let query = "";
     if (!(!state.categories || !state.categories.length)) {
-      query += `categories=${state.categories?.join(",")}&`;
+      query += `categories=${state.categories.join(",")}&`;
     }
     if (!(!state.restaurants || !state.restaurants.length)) {
-      query += `restaurants=${state.restaurants?.join(",")}&`;
+      query += `restaurants=${state.restaurants.join(",")}&`;
     }
     if (state.minPrice) {
       query += `minPrice=${state.minPrice.toString()}&`;
@@ -94,13 +85,13 @@ export const FilterProvider = ({ children }) => {
     if (state.rating) {
       query += `rating=${state.rating.toString()}&`;
     }
-    if (state.search && state.search.length != 0) {
+    if (state.search && state.search.length !== 0) {
       query += `search=${state.search}&`;
     }
-    if (query.length != 0) {
-      navigate(`${pathname}?${query}`);
+    if (query.length !== 0) {
+      window.location.href = `${pathname}?${query}`;
     }
-  }, [state]);
+  }, [state, pathname]);
 
   return (
     <FilterContext.Provider

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa6";
 import {
   LuBanknote,
@@ -92,9 +91,9 @@ const OrderList = () => {
                 <h2 className="mb-0.5 text-xl font-semibold text-default-800">
                   {toSentenceCase(status)}
                 </h2>
-                <Link to="/admin/orders/9f36ca">
+                <a href="/admin/orders/9f36ca">
                   <LuEye size={18} />
-                </Link>
+                </a>
               </div>
               <div className="flex flex-col gap-4">{orders}</div>
             </div>

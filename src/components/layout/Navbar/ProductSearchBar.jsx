@@ -1,5 +1,4 @@
 import { lazy } from "react";
-import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { createPortal } from "react-dom";
 import { LuSearch } from "react-icons/lu";
 import { useFilterContext } from "@/context";
@@ -9,17 +8,15 @@ const ProductSearchBar = () => {
   const { search, updateSearch } = useFilterContext();
 
   const pagesWithDishes = ["/dishes", "/dishes-list"];
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
+  const pathname = "#";
 
-  const [searchParams] = useSearchParams();
-  const queryParams = Object.fromEntries([...searchParams]);
+
 
   const handleSearch = (e) => {
     updateSearch(e.target.value);
     setTimeout(() => {
       if (!pagesWithDishes.includes(pathname)) {
-        navigate(`/dishes? + ${new URLSearchParams(queryParams).toString()}`);
+        console.log("done")
       }
     }, 10);
   };

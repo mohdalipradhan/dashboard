@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom";
 
 import { lazy } from "react";
 import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
 import { currentCurrency } from "@/common";
 import { calculatedPrice } from "@/helpers";
-const AddToFavouriteButton = lazy(
-  () => import("../shopping-interactivity/ProductWishlistToggler")
-);
-const AddToCartButton = lazy(
-  () => import("../shopping-interactivity/AddToCartButton")
-);
+// const AddToFavouriteButton = lazy(
+//   () => import("../shopping-interactivity/ProductWishlistToggler")
+// );
+// const AddToCartButton = lazy(
+//   () => import("../shopping-interactivity/AddToCartButton")
+// );
 const ProductQuantityToggler = lazy(
   () => import("../shopping-interactivity/ProductQuantityToggler")
 );
@@ -37,14 +36,14 @@ const ProductListCard = ({ dish }) => {
           <div className="grow">
             <div>
               <div className="mb-4 flex items-center justify-between">
-                <Link
-                  to={`/dishes/${id}`}
+                <a
+                  href={`/dishes/${id}`}
                   className="line-clamp-1 text-2xl font-semibold text-default-800 after:absolute after:inset-0"
                 >
                   {name}
-                </Link>
+                </a>
 
-                <AddToFavouriteButton dish={dish} />
+                {/* <AddToFavouriteButton dish={dish} /> */}
               </div>
               <p className="mb-6 line-clamp-2 max-w-2xl text-base text-default-600">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -52,7 +51,7 @@ const ProductListCard = ({ dish }) => {
                 enim ad minim veniam
               </p>
               <div className="mb-6 flex flex-wrap items-center gap-4 md:flex-nowrap">
-                <AddToCartButton dish={dish} className="w-fit" />
+                {/* <AddToCartButton dish={dish} className="w-fit" /> */}
 
                 <ProductQuantityToggler dish={dish} size="medium" />
               </div>

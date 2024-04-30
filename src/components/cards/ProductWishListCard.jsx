@@ -2,12 +2,12 @@ import { lazy, useEffect, useState } from "react";
 import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
 import { calculatedPrice, getRestaurantById } from "@/helpers";
 import { currentCurrency } from "@/common";
-const AddToCartButton = lazy(
-  () => import("../shopping-interactivity/AddToCartButton")
-);
-const ProductWishlistToggler = lazy(
-  () => import("../shopping-interactivity/ProductWishlistToggler")
-);
+// const AddToCartButton = lazy(
+//   () => import("../shopping-interactivity/AddToCartButton")
+// );
+// const ProductWishlistToggler = lazy(
+//   () => import("../shopping-interactivity/ProductWishlistToggler")
+// );
 
 const ProductWishListCard = ({ dish }) => {
   const { images, name, price, review, restaurant_id } = dish;
@@ -99,8 +99,8 @@ const ProductWishListCard = ({ dish }) => {
       </div>
       <div className="col-span-3 mt-4 lg:col-span-1 lg:mt-0">
         <div className="flex justify-center gap-5 lg:flex-col lg:items-end">
-          <ProductWishlistToggler dish={dish} />
-          <AddToCartButton dish={dish} />
+          {/* <ProductWishlistToggler dish={dish} /> */}
+          {/* <AddToCartButton dish={dish} /> */}
         </div>
       </div>
     </div>

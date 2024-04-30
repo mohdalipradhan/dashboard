@@ -1,17 +1,12 @@
-import { Link } from "react-router-dom";
 import { lazy } from "react";
 import { FaStar } from "react-icons/fa6";
 import { currentCurrency } from "@/common";
 import { calculatedPrice } from "@/helpers";
-const AddToFavouriteButton = lazy(
-  () => import("../shopping-interactivity/ProductWishlistToggler")
-);
+
 const ProductQuantityToggler = lazy(
   () => import("../shopping-interactivity/ProductQuantityToggler")
 );
-const AddToCartButton = lazy(
-  () => import("../shopping-interactivity/AddToCartButton")
-);
+
 
 const ProductGridCard = ({ dish }) => {
   const { images, name, review, id } = dish;
@@ -32,14 +27,14 @@ const ProductGridCard = ({ dish }) => {
         </div>
         <div className="pt-2">
           <div className="mb-4 flex items-center justify-between">
-            <Link
+            <a
               className="line-clamp-1 text-xl font-semibold text-default-800 after:absolute after:inset-0"
-              to={`/dishes/${id}`}
+              href={`/dishes/${id}`}
             >
               {name}
-            </Link>
+            </a>
 
-            <AddToFavouriteButton dish={dish} />
+            {/* <AddToFavouriteButton dish={dish} /> */}
           </div>
           <span className="mb-4 inline-flex items-center gap-2">
             <span className="rounded-full bg-primary p-1">
@@ -58,7 +53,7 @@ const ProductGridCard = ({ dish }) => {
             <ProductQuantityToggler dish={dish} />
           </div>
 
-          <AddToCartButton dish={dish} className="!w-full" />
+          {/* <AddToCartButton dish={dish} className="!w-full" /> */}
         </div>
       </div>
     </div>

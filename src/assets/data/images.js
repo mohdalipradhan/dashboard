@@ -162,14 +162,14 @@ import skewerIconCategoryImg from "../images/icons/category/skewer.svg";
 import tacoIconCategoryImg from "../images/icons/category/taco.svg";
 
 // icons
-import bagIconImg from "../images/icons/bag.svg";
-import comboIconImg from "../images/icons/combo.svg";
-import cupIconImg from "../images/icons/cup.png";
+// import bagIconImg from "../images/icons/bag.svg";
+// import comboIconImg from "../images/icons/combo.svg";
+// import cupIconImg from "../images/icons/cup.png";
 import facebookIconImg from "../images/icons/facebook.svg";
 import googleIconImg from "../images/icons/google.svg";
-import specialOfferIconImg from "../images/icons/special-offer.svg";
-import truckIconImg from "../images/icons/truck.png";
-import vegetablesIconImg from "../images/icons/vegetables.png";
+// import specialOfferIconImg from "../images/icons/special-offer.svg";
+// import truckIconImg from "../images/icons/truck.png";
+// import vegetablesIconImg from "../images/icons/vegetables.png";
 
 // other
 import authBgOtherImg from "../images/other/auth-bg.png";
@@ -204,13 +204,13 @@ import restaurant7Img from "../images/restaurants/7.png";
 import restaurant8Img from "../images/restaurants/8.png";
 import restaurantBgImg from "../images/restaurants/bg.png";
 
-// seller
-import seller1Img from "../images/seller/1.png";
-import seller2Img from "../images/seller/2.png";
-import seller3Img from "../images/seller/3.png";
-import seller4Img from "../images/seller/4.png";
-import seller5Img from "../images/seller/5.png";
-import seller6Img from "../images/seller/6.png";
+// // seller
+// import seller1Img from "../images/seller/1.png";
+// import seller2Img from "../images/seller/2.png";
+// import seller3Img from "../images/seller/3.png";
+// import seller4Img from "../images/seller/4.png";
+// import seller5Img from "../images/seller/5.png";
+// import seller6Img from "../images/seller/6.png";
 
 export {
   logoDarkImg,
@@ -355,14 +355,14 @@ export {
   seafoodIconCategoryImg,
   skewerIconCategoryImg,
   tacoIconCategoryImg,
-  bagIconImg,
-  comboIconImg,
-  cupIconImg,
+  // bagIconImg,
+  // comboIconImg,
+  // cupIconImg,
   facebookIconImg,
   googleIconImg,
-  specialOfferIconImg,
-  truckIconImg,
-  vegetablesIconImg,
+  // specialOfferIconImg,
+  // truckIconImg,
+  // vegetablesIconImg,
   authBgOtherImg,
   contactOtherImg,
   discountOtherImg,
@@ -390,10 +390,10 @@ export {
   restaurant7Img,
   restaurant8Img,
   restaurantBgImg,
-  seller1Img,
-  seller2Img,
-  seller3Img,
-  seller4Img,
-  seller5Img,
-  seller6Img,
+  // seller1Img,
+  // seller2Img,
+  // seller3Img,
+  // seller4Img,
+  // seller5Img,
+  // seller6Img,
 };

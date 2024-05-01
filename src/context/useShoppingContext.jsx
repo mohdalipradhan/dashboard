@@ -1,5 +1,4 @@
-import { createContext, useCallback, useContext, useMemo } from "react";
-import { useLocalStorage } from "@/hooks";
+import { createContext, useCallback, useContext, useMemo, useState } from "react";
 import { calculateDiscount } from "@/helpers";
 
 const INIT_STATE = {
@@ -33,7 +32,7 @@ export const useShoppingContext = () => {
 };
 
 const ShopProvider = ({ children }) => {
-  const [state, setState] = useLocalStorage("__Yum_Next_Session__", INIT_STATE);
+  const [state, setState] = useState("__Yum_Next_Session__", INIT_STATE);
 
   const addToCart = (dish, quantity) => {
     const cartItems = state.cartItems;

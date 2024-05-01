@@ -2,13 +2,12 @@ import { useState } from "react";
 import ReactSlider from "react-slider";
 import { LuChevronDown } from "react-icons/lu";
 import { useFilterContext } from "@/context";
-import { usePriceRange } from "@/hooks";
 
 const PriceFilter = () => {
   const { minPrice, maxPrice, updateMinPrice, updateMaxPrice } =
     useFilterContext();
 
-  const prices = usePriceRange();
+  const prices = 500;
 
   const [priceRange, setPriceRange] = useState([
     minPrice ?? prices?.minPrice ?? 0,

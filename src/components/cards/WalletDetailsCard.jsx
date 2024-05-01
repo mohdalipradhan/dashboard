@@ -1,10 +1,13 @@
 import { WalletCardSwiper } from "../index";
-import { useToggle } from "@/hooks";
 import { cardsData } from "@/assets/data";
 import { currentCurrency } from "@/common";
 
 const WalletDetailsCard = () => {
-  const { isOpen: isActive, toggle: toggleActive } = useToggle(true);
+  const obj = {
+    isActive: "yes",
+    toggleActive: "true"
+  }
+  const { isOpen: isActive, toggle: toggleActive } = obj;
 
   return (
     <div className="rounded-lg border border-default-200">

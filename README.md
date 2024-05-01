@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+A) Steps Undertaken:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I commenced the project by unzipping the provided folder and initiating a new eReact project using the command npx create-react-app appName.
+Upon examination of the interface and the essential imports, I delved into the sample file directory to grasp the necessary structuring.
+To streamline the process, I opted out of routing and directly rendered the requisite component.
+Through scrutinizing the exported and imported components, along with the dependencies affecting the desired output, insights were gleaned from the index.js files within folders.
+To streamline the project, I eliminated superfluous contexts, filters, layouts, and components that were not utilized in the rendering process, focusing solely on the essential dependencies.
+I replaced the Link tag provided by react-router-dom with anchor tag as told leveraging the window object for functionalities akin to useNavigate and useLocation.
+The base path of vite.config.js was set to the root link for coherence.
 
-Currently, two official plugins are available:
+B) Justification for Deviating from the Recommended Folder Structure:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I managed to streamline the nested folders into a primarily one-dimensional structure, although there are still some instances where nesting remains. I ensured that the majority of the folders were converted into components, but a few remained nested due to time constraints on my end.
 
-## Expanding the ESLint configuration
+C) Explanation for Incomplete Removal of Redundant Code within the Stipulated Deadline
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+I managed to clear out a significant portion of unused components and functions, which helped optimize the code for efficiency. However, I'm aware there might still be some instances of non-redundant code lurking around. I'm currently going through the code with a fine-tooth comb to spot any remaining areas that could use refinement. Additionally, I eliminated unnecessary authentication processes, I also removed any unused hooks. 
 
-- Configure the top-level `parserOptions` property like this:
+D) Removed Icons  and images which were unwanted as well made sure they are removed from imports and exports from the respected files
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+E) About functions and other redundant code
+Hooks :-  Kept only one hook as other were redundant and not necessary
+FakeApi: Removed Fake Api as there is no work of that dependency and also deleted wallet and other components related to it.
+Authentication is not necessary so removed that as well.
+Important : I removed unused functionalities like UseNavigate, Link, BrowserRouter, UseLocation, UseParams, and SearchParams. Additionally, I replaced Link components with anchor tags for simplicity.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+

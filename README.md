@@ -16,9 +16,12 @@ C) Explanation for Incomplete Removal of Redundant Code within the Stipulated De
 
 I managed to clear out a significant portion of unused components and functions, which helped optimize the code for efficiency. However, I'm aware there might still be some instances of non-redundant code lurking around. I'm currently going through the code with a fine-tooth comb to spot any remaining areas that could use refinement. Additionally, I eliminated unnecessary authentication processes, I also removed any unused hooks. 
 
-D) About functions and other redundant code
+D) Removed Icons  and images which were unwanted as well made sure they are removed from imports and exports from the respected files
+
+E) About functions and other redundant code
 Hooks :-  Kept only one hook as other were redundant and not necessary
 FakeApi: Removed Fake Api as there is no work of that dependency and also deleted wallet and other components related to it.
 Authentication is not necessary so removed that as well.
-
 Important : I removed unused functionalities like UseNavigate, Link, BrowserRouter, UseLocation, UseParams, and SearchParams. Additionally, I replaced Link components with anchor tags for simplicity.
+
+

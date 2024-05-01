@@ -16,6 +16,13 @@ However, all code files reside within the src folder, and components utilized ar
 
 C) Reason for not being ble to get rid of all the redundand code before the deadline:
 
+
+****
+Hooks :-  Kept only one hook as other were redundant and not necessary
+FakeApi: Removed Fake Api as there is no work of that dependency and also deleted wallet and other components related to it.
+Authentication is not necessary so removed that as well.
+
+
 Regrettably, due to time constraints, I couldn't decipher certain sections of the code promptly, necessitating their retention for subsequent optimization.
 While endeavoring to minimize redundancy, I acknowledge the possibility of further optimization, particularly within helpers and utils folders, had I been more vigilant in monitoring time allocation.
 Consolidating the code for importing and exporting components within a single index.js file across various folders could have streamlined the process. Considering that I managed to remove many unnecessary files, I successfully completed around 65% of the intended optimization.
